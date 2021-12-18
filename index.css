@@ -1,0 +1,479 @@
+:root{
+    /* primary */
+    --introNmailSignUpBackground: hsl(217, 28%, 15%);
+    --mainBackground: hsl(218, 28%, 13%);
+    --footerBackground: hsl(216, 53%, 9%);
+    --testimonialBackground: hsl(219, 30%, 18%);
+    --fontRule: 'Raleway', sans-serif;
+    /* accent */
+    --error: hsl(0, 100%, 63%);
+    --btnColor1: hsl(176, 68%, 64%);
+    --btnColor2: hsl(198, 60%, 50%);
+    /* neutral */
+    --white: hsl(0, 0%, 100%);
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 120px;
+    position: relative;
+    background: var(--introNmailSignUpBackground);
+    color: var(--white);
+}
+
+/* the style of the navigation */
+.navigation{
+    width: 100%;
+    height:120px;
+    background: var(--introNmailSignUpBackground);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 70px;
+    /* to seperate the nav from the rest of the document when scrolling */
+    border-bottom: 1px solid hsl(218, 27%, 19%); 
+}
+.navigation__logo> img:nth-child(1){
+    width: 150px;
+}
+
+.navigation__options>ul{
+    list-style-type: none;
+    display: flex;
+}
+.navigation__options>ul>li{
+    margin: 5px 25px;
+    font-weight: 400;
+}
+.navigation__options>ul>li>a{
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation__options>ul>li>a:hover{
+    font-weight: 700;
+    border-bottom: 1px solid var(--white);
+}
+/* -------------- */
+main{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* the style for the intro */
+.intro{
+    width: 100%;
+    text-align: center;
+}
+.intro>img{
+    width: 700px;
+}
+/* -------------------- */
+/* the style for the mountain with text */
+.mountainWithText{
+    width: 100%;
+    text-align: center;
+    height: 500px;
+    background-image: url('images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+.mountainWithText__header{
+    width: 700px;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+}
+.mountainWithText__header>h1{
+    font-size: 38px;
+}
+
+.mountainWithText__paragraph{
+    width: 570px;
+    margin: 60px auto 0;
+    overflow-wrap: break-word;
+}
+.mountainWithText__paragraph>p{
+    font-size: 20px;
+    color: rgb(197, 197, 197);
+}
+
+/* the "Get Started" button */
+.mountainWithText__Btn{
+    margin-top: 20px;
+}
+.mountainWithText__Btn>button{
+    font-size: 18px;
+    color: var(--white);
+    padding: 15px 90px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg,var(--btnColor1), var(--btnColor2));
+    cursor: pointer;
+    transform: translateX(-20%);
+    animation: button 2s forwards;
+}
+.mountainWithText__Btn>button:hover{
+    background: var(--btnColor1);
+}
+    /* -------- */
+/* -------------------- */
+
+/* the style for the icons-info */
+.icons-info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: var(--mainBackground);
+}
+.icons-info__card{
+    width: 320px;
+    margin: 0 50px 60px;
+    text-align: center;
+}
+.icons-info__card_image{
+    margin-bottom: 10px;
+}
+.icons-info__card_text-header{
+    margin-bottom: 10px;
+    font-family: var(--fontRule);
+}
+.icons-info__card_text-content>p{
+    word-break: break-word;
+}
+
+/* ------------------------- */
+
+/* the style of "stayProductive */
+.stayProductive{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background: var(--mainBackground);
+}
+.stayProductive__image{
+    padding: 0 40px 0 80px;
+}
+.stayProductive__image>img{
+    width: 500px;
+}
+.stayProductive__text{
+    text-align: left;
+    padding: 0 80px 0 0;
+}
+.stayProductive__text_header{
+    width: 300px;
+    margin-bottom: 20px;
+    font-family: var(--fontRule);
+}
+
+.stayProductive__text_content>p{
+    word-break: break-word;
+}
+.stayProductive__text_learnMore{
+    display: flex;
+    margin-top: 20px;
+    width: 150px;
+    color: var(--btnColor1);
+    border-bottom: 1px solid var(--btnColor1);
+    cursor: pointer;
+}
+.stayProductive__text_learnMore:hover{
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+.stayProductive__text_learnMore:hover #arrow{
+    filter: invert(100%) sepia(12%) saturate(3%) hue-rotate(309deg) brightness(113%) contrast(100%);
+}
+
+/* the style of the quotes */
+.quotes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 50px 200px;
+    background: var(--mainBackground);
+    background-image: url('images/bg-quotes.png');
+    background-repeat: no-repeat;
+    background-position: 5% 0%;
+}
+.quotes__card{
+    width: 300px;
+    margin: 20px;
+    background: var(--testimonialBackground);
+    -webkit-box-shadow: 14px 12px 0px 0px hsla(218, 27%, 14%, 0.972);
+    -moz-box-shadow: 14px 12px 0px 0px hsla(218, 27%, 14%, 0.972);
+    box-shadow: 14px 12px 0px 0px hsla(218, 27%, 14%, 0.972);
+}
+.quotes__card_content{
+    text-align: left;
+    padding: 20px;
+}
+.quotes__card_content>p{
+    font-size: 12px;
+}
+.quotes__card_profile{
+    display: flex;
+    align-items: center;
+    margin: 8px 20px;
+}
+.quotes__card_profile-img>img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.quotes__card_info{
+    font-size: 8px;
+    margin: 0 10px;
+}
+
+/* the style of the footer */
+footer{
+    max-width: 1400px;
+    width: 100%;
+    background: var(--footerBackground);
+    padding: 150px 80px;
+    margin: 0 auto;
+}
+.footer__content_logo{
+    margin-bottom: 20px;
+}
+.footer__content{
+    display: flex;
+    justify-content: space-evenly;
+    flex: 5;
+}
+.footer__content_text{
+    display: flex;
+    align-items: flex-start;
+}
+.footer__content-text{
+    margin: 0 25px;
+}
+.footer__content-text>p{
+    width: 330px;
+    word-break: break-word;
+}
+.footer__contact_container{
+    width: 150px;
+}
+.footer__contact{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__content_aboutList>ul{
+    list-style-type: none;
+    padding: 0 50px;
+}
+.footer__content_aboutList>ul>li{
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: rgb(219, 219, 219);
+}
+.footer__content_aboutList>ul>li:hover{
+    color: white;
+}
+
+
+/* the style for the social network icons */
+.footer__social>span{
+    font-size: 25px;
+    color: var(--white);
+    margin: 0 10px 0;
+    cursor: pointer;
+}
+.footer__social>span:hover{
+    color: var(--btnColor2);
+}
+/* ----------------- */
+
+/* the style for the early acces */
+.earlyAccess{
+    position: absolute;
+    bottom: 400px;
+    left: 50%;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background: var(--introNmailSignUpBackground);
+    -webkit-box-shadow: 8px 7px 0px 0px rgba(26, 33, 45, 0.26);
+    -moz-box-shadow: 8px 7px 0px 0px rgba(26, 33, 45, 0.26);
+    box-shadow: 8px 7px 0px 0px rgba(26, 33, 45, 0.26);
+}
+.earlyAccess__header{
+    margin-bottom: 20px;
+}
+.earlyAccess__content{
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.earlyAccess__start{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+.earlyAccess__start_input>input{
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.earlyAccess__start_Btn{
+    margin: 0;
+}
+.earlyAccess__start_Btn>button{
+    font-size: 14px;
+    padding: 10px 50px;
+}
+
+/* --------------- */
+
+
+/* phone settings */
+@media only screen and (max-width: 900px){
+    main{
+        margin: 0px;
+    }
+    footer{
+        margin: 0;
+        padding: 100px 30px;
+    }
+    .intro>img{
+        width: 500px;
+    }
+    .mountainWithText__header{
+        width: 500px
+    }
+    .mountainWithText__header>h1{
+        font-size: 25px;
+    }
+    .mountainWithText__paragraph{
+        width: 370px;
+    }
+    .mountainWithText__paragraph>p{
+        font-size: 15px;
+    }
+    .stayProductive{
+        flex-direction: column;
+    }
+    .stayProductive__text{
+        text-align: center;
+        padding: 0 10px;
+    }
+    .stayProductive__text_header{
+        margin: 0 auto 10px;
+    }
+    .stayProductive__text_header>h1{
+        font-size: 25px;
+    }
+    .stayProductive__text_content>p{
+        text-align: left;
+    }
+    .stayProductive__image>img{
+        width: 300px;
+    }
+    .quotes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .quotes__card{
+        width: 100%;
+        margin: 10px;
+    }
+    .footer__content{
+        flex-direction: column;
+    }
+    .footer__content_text,
+    .footer__contact_container,
+    .footer__content_aboutList{
+        margin: 10px 0;
+    }
+    .footer__social{
+        text-align: center;
+    }
+    .earlyAccess{
+        bottom: 620px;
+        margin: 0;
+        width: 100%;
+        max-width: 500px;
+    }
+    .earlyAccess__start{
+        flex-direction: column;
+    }
+    .earlyAccess__header{
+        font-size: 13px;
+    }
+    .earlyAccess__content{
+        width: unset;
+        font-size: 10px;
+    }
+    .earlyAccess__start_Btn{
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    main{
+        margin: 0px;
+    }
+    footer{
+        margin: 0;
+    }
+    .intro>img{
+        width: 200px;
+    }
+    .navigation{
+        padding: 20px;
+    }
+    .mountainWithText__header{
+        width: 200px;
+    }
+    .mountainWithText__paragraph{
+        width: 200px;
+    }
+    .mountainWithText__paragraph>p{
+        font-size: 10px;
+    }
+    .mountainWithText__header>h1{
+        font-size: 16px;
+    }
+    .mountainWithText__header{
+        font-size: 10px;
+    }
+    .footer__content-text>p{
+        width: unset;
+    }
+    .stayProductive__image{
+        padding: 0 20px;
+    }
+    .earlyAccess__start_input>input{
+        width: unset;
+    }
+}
+
+/* animations */
+@media only screen and (min-width: 950px){
+    @keyframes button{
+        100%{
+            transform: translateX(0%);
+        }
+    }
+}
