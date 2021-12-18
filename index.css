@@ -120,7 +120,7 @@ main{
     border-radius: 25px;
     background: linear-gradient(90deg,var(--btnColor1), var(--btnColor2));
     cursor: pointer;
-    transform: translateX(-20%);
+    /* transform: translateX(-20%); */
     animation: button 2s forwards;
 }
 .mountainWithText__Btn>button:hover{
@@ -472,6 +472,9 @@ footer{
 /* animations */
 @media only screen and (min-width: 950px){
     @keyframes button{
+        0%{
+            transform: translateX(-20%);
+        }
         100%{
             transform: translateX(0%);
         }
